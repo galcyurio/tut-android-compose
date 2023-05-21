@@ -3,9 +3,7 @@ package com.github.galcyurio.compose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Surface
-import androidx.compose.ui.Modifier
+import com.github.galcyurio.compose.sample.SampleData
 import com.github.galcyurio.compose.ui.theme.TutAndroidComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,9 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TutAndroidComposeTheme {
-                Surface(modifier = Modifier.fillMaxSize()) {
-                    MessageCard(Message("galcyurio", "Hello, world!"))
-                }
+                Conversation(SampleData.conversationSample)
             }
         }
     }
